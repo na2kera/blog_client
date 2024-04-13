@@ -7,7 +7,7 @@ type Props = {
 
 // pages/posts/[id].tsx
 export async function getStaticPaths() {
-  const res = await fetch("https¥://localhost:3001/api/v1/posts");
+  const res = await fetch("http://localhost:3001/api/v1/posts");
   const posts: Post[] = await res.json();
 
   //全てのパスを取得
