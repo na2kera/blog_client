@@ -36,7 +36,9 @@ export default function Home({ posts }: Props) {
             <Link href={`posts/${post.id}`} className={styles.postCardBox}>
               <h2>{post.title}</h2>
               <p>{post.content}</p>
-              <button className={styles.editButton}>Edit</button>
+              <Link href={`/edit-post/${post.id}`}>
+                <button className={styles.editButton}>Edit</button>
+              </Link>
               <button className={styles.deleteButton}>Delete</button>
             </Link>
           </div>
